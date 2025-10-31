@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gustavo Gomes - Portfólio Moderno Rústico</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Ícones das linguagens e ferramentas (Devicons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Configuração do Tailwind para Cores Rústicas e Fonte Limpa -->
+    <style>
+        /* Configurações Globais e Fonte */
+        :root {
+            --color-primary: #5d4037; /* Marrom escuro */
+            --color-accent: #a1887f;  /* Terracota/Marrom Claro */
+            --color-background: #fcf8f4; /* Off-White Suave */
+            --color-text: #2c2c2c;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Estilos do Menu para o tema Rústico/Moderno */
+        .nav-link.active {
+            color: var(--color-accent) !important;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        /* Estilo para a animação de fade-in */
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rust-primary': '#5d4037',
+                        'rust-accent': '#a1887f',
+                        'rust-bg': '#fcf8f4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header Fixo -->
+    <header class="sticky top-0 z-50 bg-rust-primary shadow-xl">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 py-4">
+            <h1 class="text-2xl font-bold text-rust-bg tracking-wider mb-3 md:mb-0">
+                GUSTAVO GOMES DA SILVA
+            </h1>
+            
+            <!-- Menu de Navegação -->
+            <nav aria-label="Menu principal">
+                <div class="flex space-x-4 md:space-x-6 text-sm md:text-base font-medium">
+                    <a href="#inicio" class="nav-link active text-rust-bg hover:text-rust-accent transition duration-300 px-2 py-1">Início</a>
+                    <a href="#sobre" class="nav-link text-rust-bg hover:text-rust-accent transition duration-300 px-2 py-1">Sobre</a>
+                    <a href="#depoimento" class="nav-link text-rust-bg hover:text-rust-accent transition duration-300 px-2 py-1">Depoimentos</a>
+                    <a href="#formacoes" class="nav-link text-rust-bg hover:text-rust-accent transition duration-300 px-2 py-1">Formações</a>
+                    <a href="#habilidades" class="nav-link text-rust-bg hover:text-rust-accent transition duration-300 px-2 py-1">Habilidades</a>
+                    <a href="#projetos" class="nav-link text-rust-bg hover:text-rust-accent transition duration-300 px-2 py-1">Projetos</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-7xl mx-auto p-4 md:p-8 space-y-16 md:space-y-24">
+
+        <!-- Seção: Início -->
+        <section id="inicio" class="animate-fade-in-up is-visible pt-10 md:pt-16 flex flex-col md:flex-row items-center gap-10 bg-white p-8 rounded-xl shadow-2xl shadow-rust-accent/30" tabindex="0" aria-label="Seção Início">
+            <div class="md:w-1/3">
+                <!-- Mantendo o SRC da imagem original -->
+                <img src="imagens/Image (1).jpg" alt="" 
+                     class="w-full h-auto object-cover rounded-full aspect-square border-4 border-rust-accent shadow-lg transition transform hover:scale-[1.02] duration-500" />
+            </div>
+            <div class="md:w-2/3 intro-text text-center md:text-left">
+                <h2 class="text-5xl md:text-7xl font-bold text-rust-primary mb-4 leading-tight">
+                    Gustavo Gomes
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-600 border-l-4 border-rust-accent pl-4 italic">
+                    Técnico em Informática para Internet, criando soluções web que unem <strong class="text-rust-primary">estética</strong> e <strong class="text-rust-primary">usabilidade</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção: Sobre -->
+        <section id="sobre" class="animate-fade-in-up bg-white p-8 rounded-xl shadow-xl border-t-4 border-rust-accent" tabindex="0" aria-label="Seção Sobre">
+            <h2 class="text-3xl font-bold text-rust-primary mb-6 border-b pb-2">Sobre Mim</h2>
+            <p class="text-lg leading-relaxed">
+                Tenho experiência em front-end e back-end, sempre buscando entregar projetos que unem tecnologia e design para oferecer a melhor experiência possível. Curioso e dedicado, estou constantemente aprendendo novas tecnologias, focado em transformar ideias em aplicações funcionais, bem desenhadas e eficientes. Acredito que a combinação de um código limpo com um design pensado é a chave para o sucesso de qualquer projeto.
+            </p>
+        </section>
+
+        <!-- Seção: Depoimentos (REFEITA) -->
+        <section id="depoimento" class="animate-fade-in-up" tabindex="0" aria-label="Seção Depoimentos">
+            <h2 class="text-3xl font-bold text-rust-primary mb-8 text-center">O Que Dizem Sobre o Meu Trabalho</h2>
+            
+            <!-- Depoimentos Modernos em Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Depoimento 1 (Com mock data melhorado) -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border border-rust-accent/50 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-rust-accent opacity-70">"</div>
+                    <blockquote class="italic text-gray-700 mb-4">
+                        <p class="min-h-[100px]">“O site da Keke Dú Corte é bonito, simples e fácil de usar. As informações estão bem organizadas e passam confiança. Ótima apresentação dos serviços!”</p>
+                    </blockquote>
+                    <div class="text-right">
+                        <p class="font-semibold text-rust-primary">- Jose</p>
+                        <p class="text-sm text-gray-500"></p>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 (Com mock data melhorado) -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border border-rust-accent/50 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-rust-accent opacity-70">"</div>
+                    <blockquote class="italic text-gray-700 mb-4">
+                        <p class="min-h-[100px]">“O site da Pizza Nostra é atrativo e bem montado. O cardápio e as promoções chamam atenção. Dá vontade de fazer um pedido!”</p>
+                    </blockquote>
+                    <div class="text-right">
+                        <p class="font-semibold text-rust-primary">- Miguel</p>
+                        <p class="text-sm text-gray-500"></p>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 (Com mock data melhorado) -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border border-rust-accent/50 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 hidden lg:block">
+                    <div class="text-5xl mb-4 text-rust-accent opacity-70">"</div>
+                    <blockquote class="italic text-gray-700 mb-4">
+                        <p class="min-h-[100px]">“O Raízes Conectadas tem uma proposta muito boa. O design é limpo e o conteúdo mostra bem a ideia do projeto.”</p>
+                    </blockquote>
+                    <div class="text-right">
+                        <p class="font-semibold text-rust-primary">- Fernando</p>
+                        <p class="text-sm text-gray-500"></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção: Formações -->
+        <section id="formacoes" class="animate-fade-in-up bg-white p-8 rounded-xl shadow-xl border-l-4 border-rust-accent" tabindex="0" aria-label="Seção Formações">
+            <h2 class="text-3xl font-bold text-rust-primary mb-6 border-b pb-2">Formações</h2>
+            <ul class="space-y-4">
+                <li class="p-3 bg-rust-bg rounded-lg transition duration-300 hover:bg-gray-100">
+                    <strong class="text-lg text-rust-primary">Técnico em Informática para Internet</strong> – ETEC [Senac]
+                    <span class="block text-sm text-gray-600">Conclusão: 2025</span>
+                </li>
+                <li class="p-3 bg-rust-bg rounded-lg transition duration-300 hover:bg-gray-100">
+                    <strong class="text-lg text-rust-primary">Curso de Desenvolvimento Web</strong> – Plataforma Alura (HTML, CSS, JavaScript)
+                    <span class="block text-sm text-gray-600">Foco em práticas de mercado e desenvolvimento responsivo.</span>
+                </li>
+                <li class="p-3 bg-rust-bg rounded-lg transition duration-300 hover:bg-gray-100">
+                    <strong class="text-lg text-rust-primary">Curso de PHP e MySQL</strong> – Curso em Vídeo (Professor Gustavo Guanabara)
+                    <span class="block text-sm text-gray-600">Fundamentos de programação back-end e banco de dados.</span>
+                </li>
+                <li class="p-3 bg-rust-bg rounded-lg transition duration-300 hover:bg-gray-100">
+                    <strong class="text-lg text-rust-primary">Curso de Informática Básica e Avançada</strong>
+                    <span class="block text-sm text-gray-600">Conhecimentos teóricos e práticos em sistemas operacionais, pacote Office, internet, redes e noções de manutenção de computadores.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção: Habilidades -->
+        <section id="habilidades" class="animate-fade-in-up" tabindex="0" aria-label="Seção Habilidades">
+            <h2 class="text-3xl font-bold text-rust-primary mb-8 text-center">Habilidades Técnicas</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+
+                <!-- Skill Item Template -->
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-rust-accent transition duration-300 transform hover:scale-105 group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-3 grayscale group-hover:grayscale-0 transition duration-300" />
+                    <span class="text-rust-primary font-semibold">HTML5</span>
+                </div>
+                
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-rust-accent transition duration-300 transform hover:scale-105 group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-3 grayscale group-hover:grayscale-0 transition duration-300" />
+                    <span class="text-rust-primary font-semibold">CSS3</span>
+                </div>
+
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-rust-accent transition duration-300 transform hover:scale-105 group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-3 grayscale group-hover:grayscale-0 transition duration-300" />
+                    <span class="text-rust-primary font-semibold">JavaScript</span>
+                </div>
+
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-rust-accent transition duration-300 transform hover:scale-105 group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="w-12 h-12 mb-3 grayscale group-hover:grayscale-0 transition duration-300" />
+                    <span class="text-rust-primary font-semibold">PHP</span>
+                </div>
+
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-rust-accent transition duration-300 transform hover:scale-105 group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12 mb-3 grayscale group-hover:grayscale-0 transition duration-300" />
+                    <span class="text-rust-primary font-semibold">MySQL</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção: Projetos -->
+        <section id="projetos" class="animate-fade-in-up" tabindex="0" aria-label="Seção Projetos">
+            <h2 class="text-3xl font-bold text-rust-primary mb-8 text-center">Projetos em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Projeto 1 -->
+                <article class="project-card bg-white p-6 rounded-xl shadow-xl border-b-4 border-rust-accent/70 transition duration-300 hover:shadow-2xl hover:bg-rust-bg" aria-labelledby="proj1-title">
+                    <div class="flex items-start gap-4">
+                        <div class="project-img p-3 bg-rust-accent/20 rounded-lg shrink-0">
+                            <!-- Mantendo o SRC da imagem original -->
+                            <img src="imagens/Wordmark_Logo_with_Casual_Sans-Serif_Font-removebg-preview (1).png" alt="" class="w-16 h-16"/>
+                        </div>
+                        <div>
+                            <h3 id="proj1-title" class="text-2xl font-semibold text-rust-primary mb-2">Barbearia</h3>
+                            <p class="text-gray-700 mb-4">Site responsivo para apresentação profissional, criado com HTML5, CSS3 e JavaScript.</p>
+                            <a href="https://kekeducorte.github.io/barbearia/index.html" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-rust-primary text-white rounded-lg hover:bg-rust-accent transition duration-300 text-sm font-medium">
+                                Ver o Site &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="project-card bg-white p-6 rounded-xl shadow-xl border-b-4 border-rust-accent/70 transition duration-300 hover:shadow-2xl hover:bg-rust-bg" aria-labelledby="proj2-title">
+                    <div class="flex items-start gap-4">
+                        <div class="project-img p-3 bg-rust-accent/20 rounded-lg shrink-0">
+                            <!-- Mantendo o SRC da imagem original -->
+                            <img src="imagens/logo (1).png" alt="" class="w-16 h-16"/>
+                        </div>
+                        <div>
+                            <h3 id="proj2-title" class="text-2xl font-semibold text-rust-primary mb-2">Loja Tecnológica</h3>
+                            <p class="text-gray-700 mb-4">Loja online simples com sistema de carrinho, feita com PHP, MySQL e front-end CSS personalizado.</p>
+                            <a href="https://gustavo11082007.github.io/Loja-Tecnologia/" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-rust-primary text-white rounded-lg hover:bg-rust-accent transition duration-300 text-sm font-medium">
+                                Ver o Site &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 3 -->
+                <article class="project-card bg-white p-6 rounded-xl shadow-xl border-b-4 border-rust-accent/70 transition duration-300 hover:shadow-2xl hover:bg-rust-bg" aria-labelledby="proj3-title">
+                    <div class="flex items-start gap-4">
+                        <div class="project-img p-3 bg-rust-accent/20 rounded-lg shrink-0">
+                            <!-- Mantendo o SRC da imagem original -->
+                            <img src="imagens/seedling (3).svg" alt="" class="w-16 h-16"/>
+                        </div>
+                        <div>
+                            <h3 id="proj3-title" class="text-2xl font-semibold text-rust-primary mb-2">Raízes Conectadas</h3>
+                            <p class="text-gray-700 mb-4">Plataforma digital que compartilha conteúdos e projetos focados em raízes culturais e fortalecimento comunitário.</p>
+                            <a href="https://raizesconectadas.glide.page/dl/7a4e80" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-rust-primary text-white rounded-lg hover:bg-rust-accent transition duration-300 text-sm font-medium">
+                                Ver o Site &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 4 -->
+                <article class="project-card bg-white p-6 rounded-xl shadow-xl border-b-4 border-rust-accent/70 transition duration-300 hover:shadow-2xl hover:bg-rust-bg" aria-labelledby="proj4-title">
+                    <div class="flex items-start gap-4">
+                        <div class="project-img p-3 bg-rust-accent/20 rounded-lg shrink-0">
+                            <!-- Mantendo o SRC da imagem original -->
+                            <img src="imagens/logo (1).jpeg" alt="" class="w-16 h-16"/>
+                        </div>
+                        <div>
+                            <h3 id="proj4-title" class="text-2xl font-semibold text-rust-primary mb-2">Pizzaria</h3>
+                            <p class="text-gray-700 mb-4">Site de pizzaria com front-end responsivo, integração com API REST, desenvolvido em React.</p>
+                            <a href="https://gustavo11082007.github.io/Pizza-Nostra/#home" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-rust-primary text-white rounded-lg hover:bg-rust-accent transition duration-300 text-sm font-medium">
+                                Ver o Site &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-rust-primary mt-16 py-8 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
+            <p class="text-rust-bg mb-4 text-lg">Conecte-se comigo!</p>
+            <div class="flex justify-center space-x-6 footer-icons">
+                
+                <!-- Ícone GitHub -->
+                <a href="https://github.com/Gustavo11082007" target="_blank" aria-label="GitHub" class="block w-10 h-10 hover:opacity-75 transition duration-300">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="footer-icon filter invert brightness-0" />
+                </a>
+                
+                <!-- Ícone WhatsApp -->
+                <a href="https://wa.me/5527992916786" target="_blank" aria-label="WhatsApp" class="block w-10 h-10 hover:opacity-75 transition duration-300">
+                    <!-- WhatsApp SVG simplificado, mantendo o SRC original -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="fab fa-whatsapp" />
+                </a>
+                
+                <!-- Ícone LinkedIn -->
+                <a href="https://www.instagram.com/guxtaggs" target="_blank" aria-label="Instragram" class="block w-10 h-10 hover:opacity-75 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" width="40" height="40">
+                </a>
+            </div>
+            <p class="text-rust-accent text-sm mt-6">Portfólio de Gustavo Gomes da Silva &copy; 2024</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para Interatividade e Animações -->
+    <script>
+        // 1. JS para a navegação (manter o link ativo)
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav a');
+
+            // Função para atualizar o link ativo
+            const updateActiveLink = (currentSectionId) => {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            // Listener para cliques nos links (para scroll suave e atualização imediata)
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Remove a classe 'active' de todos
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Adiciona a classe 'active' ao clicado
+                    e.currentTarget.classList.add('active');
+                });
+            });
+
+            // 2. JS para animação de fade-in ao rolar (Intersection Observer)
+            const sections = document.querySelectorAll('section');
+            
+            // Configurações do observador
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // 10% da seção visível
+            };
+
+            // Callback do observador
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    const id = entry.target.id;
+                    
+                    if (entry.isIntersecting) {
+                        // Faz a seção aparecer
+                        entry.target.classList.add('is-visible');
+                        
+                        // Atualiza o link ativo ao entrar na seção
+                        updateActiveLink(id);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            // Adiciona a classe de animação e observa cada seção
+            sections.forEach(section => {
+                // Aplica a classe de animação (inicia com opacidade 0)
+                section.classList.add('animate-fade-in-up');
+                
+                // Observa a seção
+                observer.observe(section);
+            });
+
+            // Lidar com a primeira seção (Início) para que ela comece visível
+            const inicioSection = document.getElementById('inicio');
+            if (inicioSection) {
+                // Garante que a primeira seção já esteja visível ao carregar
+                inicioSection.classList.add('is-visible');
+            }
+        });
+
+    </script>
+</body>
+</html>
